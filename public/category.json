@@ -1,0 +1,27 @@
+[
+    {
+        "id": "643344fb13bee05223a4a6e5",
+        "category_logo": "https://cdn-icons-png.flaticon.com/512/1024/1024914.png",
+        "category_name": "Account & Finance",
+        "job_available": "120"
+    },
+    {
+        "id": "643344fbb9dc602c20555b72",
+        "category_logo": "https://cdn-icons-png.flaticon.com/512/2910/2910914.png",
+        "category_name": "Creative Design",
+        "job_available": "175"
+    },
+    {
+        "id": "643344fb128b733cc7949036",
+        "category_logo": "https://cdn-icons-png.flaticon.com/512/1968/1968641.png",
+        "category_name": "Marketing & Sales",
+        "job_available": "87"
+    },
+    {
+        "id": "643344fbaca7a4439485d55f",
+        "category_logo": "https://cdn-icons-png.flaticon.com/512/897/897219.png",
+        "category_name": "Engineering Job",
+        "job_available": "99"
+    }
+]
+

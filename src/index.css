@@ -6,3 +6,7 @@
 .btn-all{
     @apply btn bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-400 hover:to-blue-600 border-0;
 }
+
+.sub-title{
+    @apply font-medium text-[#757575] text-lg;
+}
