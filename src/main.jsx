@@ -10,16 +10,18 @@ import Statistics from './Components/Statistics';
 import First from './Components/First';
 import Applied from './Components/Applied';
 import Blog from './Components/Blog';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
         element: <First></First>,
-        loader: () => fetch('category.json')
+        loader: () => fetch('category.json'),
       },
       {
         path: '/statistics',

@@ -28,6 +28,9 @@ const First = () => {
                         jobCategories.map(category => <Category key={category.id} category={category}></Category>)
                     }
                 </div>
+                <div>
+                    
+                </div>
             </section>
         </>
     );

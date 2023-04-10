@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "company_logo": "https://abctechnologies.com/wp-content/uploads/ABCTechnologies_Primary_RGB.png",
+        "job_title": "Software Engineer",
+        "company_name": "ABC Technologies",
+        "remote_or_onsite": "Remote",
+        "location": "New York, NY",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$80,000 - $100,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Bachelor's degree in Computer Science or related field.",
+        "experiences": "Minimum 3 years of experience in software development.",
+        "contact_information": {
+            "phone": "123-456-7890",
+            "email": "jobs@abc.com"
+        }
+    },
+    {
+        "id": 2,
+        "company_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJVFnngFT8NDNyE0VwbjbxzNCst-ZrpIZ_WQ&usqp=CAU",
+        "job_title": "UX/UI Designer",
+        "company_name": "XYZ Design Studio",
+        "remote_or_onsite": "Onsite",
+        "location": "San Francisco, CA",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$60,000 - $80,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Bachelor's degree in Design or related field.",
+        "experiences": "Minimum 2 years of experience in UX/UI design.",
+        "contact_information": {
+            "phone": "987-654-3210",
+            "email": "jobs@xyzstudio.com"
+        }
+    },
+    {
+        "id": 3,
+        "company_logo": "https://gazette-live-storagestack-17-assetstorages3bucket-1571qjbkpxwcd.s3.ap-southeast-2.amazonaws.com/public/Uploads/education-gazette/df3ba76774fa9da4c35db99a1c9652ba__FitMaxWzY4OCw1MDZd.png",
+        "job_title": "Data Scientist",
+        "company_name": "123 Analytics",
+        "remote_or_onsite": "Remote",
+        "location": "Chicago, IL",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$90,000 - $120,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Master's degree in Data Science or related field.",
+        "experiences": "Minimum 5 years of experience in data science.",
+        "contact_information": {
+            "phone": "555-123-4567",
+            "email": "jobs@123analytics.com"
+        }
+    },
+    {
+        "id": 4,
+        "company_logo": "https://www.freepnglogos.com/uploads/abc-png-logo/play-abc-logo-png-22.png",
+        "job_title": "Marketing Manager",
+        "company_name": "ABC Marketing Agency",
+        "remote_or_onsite": "Onsite",
+        "location": "Los Angeles, CA",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$70,000 - $90,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Bachelor's degree in Marketing or related field.",
+        "experiences": "Minimum 3 years of experience in marketing.",
+        "contact_information": {
+            "phone": "222-987-6543",
+            "email": "jobs"
+        }
+    },
+    {
+        "id": 5,
+        "company_logo": "https://www.seekpng.com/png/full/361-3611013_web-solutions-website-design-isle-of-man-web.png",
+        "job_title": "Front-end Developer",
+        "company_name": "Web Solutions Inc.",
+        "remote_or_onsite": "Remote",
+        "location": "Austin, TX",
+        "fulltime_or_parttime": "Full-time",
+        "salary": "$75,000 - $90,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Bachelor's degree in Computer Science or related field.",
+        "experiences": "Minimum 2 years of experience in front-end development.",
+        "contact_information": {
+            "phone": "444-567-8901",
+            "email": "jobs@websolutions.com"
+        }
+    },
+    {
+        "id": 6,
+        "company_logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/ICON_Creative_Studio_Logo.png",
+        "job_title": "Graphic Designer",
+        "company_name": "Creative Studio",
+        "remote_or_onsite": "Onsite",
+        "location": "Seattle, WA",
+        "fulltime_or_parttime": "Part-time",
+        "salary": "$40,000 - $60,000",
+        "job_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "job_responsibility": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "educational_requirements": "Bachelor's degree in Design or related field.",
+        "experiences": "Minimum 1 year of experience in graphic design.",
+        "contact_information": {
+            "phone": "999-111-2222",
+            "email": "jobs@creativestudio.com"
+        }
+    }
+]
