@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import img from '../assets/img/P3OLGJ1 copy 1.png'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import Category from './Category';
 import AllJobs from './AllJobs';
+import Loading from './loading';
 
 const First = () => {
-    // const categories = useLoaderData();
+    const navigation = useNavigation();
+    if (navigation.state === "loading") {
+        return <Loading></Loading>
+    }
     const jobs = useLoaderData();
-    const [job, setJobs] = useState(false)
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch('category.json')
+            .then(res => res.json())
+            .then(data => setCategories(data))
+    }, [])
 
     return (
         <>
@@ -27,9 +36,9 @@ const First = () => {
                 <h1 className='sub-heading'>Job Category List</h1>
                 <p className='sub-title text-center py-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className="grid sm:grid-cols-2 md:grid-cols-4 justify-center items-center gap-6 my-5 container mx-auto p-5 lg:px-14">
-                    {/* {
+                    {
                         categories.map(category => <Category key={category.id} category={category}></Category>)
-                    } */}
+                    }
                 </div>
             </section>
             <section>
@@ -41,7 +50,7 @@ const First = () => {
                 </div>
             </section>
             <div className='text-center'>
-            <button className='btn-all mb-32'>See All Jobs</button>
+                <button className='btn-all mb-32'>See All Jobs</button>
             </div>
         </>
     );

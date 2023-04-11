@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import img from '../assets/banner-icon/Vector-1.png'
 import img2 from '../assets/banner-icon/Vector.png'
 import { CurrencyDollarIcon, CalendarDaysIcon, MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import Loading from './loading';
 
 const Details = () => {
+    const navigation = useNavigation();
+    if (navigation.state === "loading") {
+        return <Loading></Loading>
+    }
     const featuredJobs = useLoaderData();
     console.log(featuredJobs);
     const { id } = useParams();
