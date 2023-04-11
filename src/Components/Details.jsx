@@ -4,27 +4,43 @@ import img from '../assets/banner-icon/Vector-1.png'
 import img2 from '../assets/banner-icon/Vector.png'
 import { CurrencyDollarIcon, CalendarDaysIcon, MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import Loading from './loading';
+import { addToDb } from '../utility/fakeLocalDb';
 
 const Details = () => {
     const navigation = useNavigation();
     if (navigation.state === "loading") {
         return <Loading></Loading>
     }
-    const featuredJobs = useLoaderData();
-    console.log(featuredJobs);
-    const { id } = useParams();
-    console.log(id);
-
-
     const [job, setJob] = useState({});
+    const [addedJob, setAddedJob] = useState([]);
+
+
+    const { id } = useParams();
+    const featuredJobs = useLoaderData();
+
+    const handleApplyNowJob = (id) => {
+        // const existJob = addedJob.find(adJob => adJob.id === job.id)
+        // let newJob = []
+        // if (existJob) {
+        //     console.log("ase");
+        //     newJob = [...addedJob, job]
+        // } else {
+        //     console.log('nai');
+        // }
+        // setAddedJob(newJob)
+        addToDb(id)
+
+    }
+
+
     useEffect(() => {
         const getJobDetails = featuredJobs.find(singleJob => singleJob.id == id)
-        console.log(getJobDetails);
         setJob(getJobDetails);
     }, [])
+
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, location, contact_information } = job;
     return (
-        <div>
+        <>
             <div className='relative'>
                 <img src={img} alt="" className='absolute -top-32 -right-4 h-24 md:h-52' />
             </div>
@@ -64,15 +80,12 @@ const Details = () => {
                             <p className='text-xl'><span className='font-bold'>Address : </span><span className='font-medium text-[#757575]'>{location}</span></p>
                         </div>
                     </div>
-                    <button className='btn-all w-full h-16 mt-6'>Apply Now</button>
+                    <button onClick={() => handleApplyNowJob(id)} className='btn-all w-full h-16 mt-6'>Apply Now</button>
                 </div>
             </div>
-
-        </div>
+        </>
     );
 };
 
 export default Details;
-
-
 

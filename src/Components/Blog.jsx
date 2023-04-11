@@ -8,7 +8,7 @@ const Blog = () => {
         return <Loading></Loading>
     }
     return (
-        <div>
+        <div className='min-h-screen'>
             This is blog section
         </div>
     );
