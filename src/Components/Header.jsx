@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import AllJobs from './AllJobs';
 
 const Header = () => {
     return (
@@ -29,7 +30,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn-all">Start Applying</a>
+                        <Link className="btn-all" to={'/'}>Start Applying</Link>
                     </div>
                 </div>
             </div>
