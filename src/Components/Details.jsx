@@ -5,6 +5,7 @@ import img2 from '../assets/banner-icon/Vector.png'
 import { CurrencyDollarIcon, CalendarDaysIcon, MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import Loading from './loading';
 import { addToDb } from '../utility/fakeLocalDb';
+import toast from 'react-hot-toast';
 
 const Details = () => {
     const navigation = useNavigation();
@@ -29,6 +30,7 @@ const Details = () => {
         // }
         // setAddedJob(newJob)
         addToDb(id)
+        toast.success('Job Applied SuccessFully')
 
     }
 
