@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import Loading from './loading';
 import img from '../assets/banner-icon/Vector-1.png'
@@ -12,6 +12,13 @@ const Applied = () => {
     if (navigation.state === "loading") {
         return <Loading></Loading>
     }
+    const [filter, setFilter] = useState('all');
+    const handleFilterChange = (filterBy) => {
+        setFilter(filterBy.target.value);
+    };
+
+    const filteredJobs = filter === 'all' ? initialJob : initialJob.filter(job => job.remote_or_onsite === filter);
+
     return (
         <>
             <div className='relative'>
@@ -24,16 +31,24 @@ const Applied = () => {
             <div className='min-h-screen'>
                 {/* <h1>{initialJob.length}</h1> */}
                 <div className='container mx-auto p-5 text-right'>
-                    <div className="dropdown dropdown-end mt-32 mb-8">
-                        <label tabIndex={0} className="flex items-center p-5 bg-[#F4F4F4] rounded-lg">Filter by <ChevronDownIcon className='h-6 w-6'></ChevronDownIcon></label>
-                        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Onsite</a></li>
-                            <li><a>Remote</a></li>
-                        </ul>
+                    {/* <div className="dropdown dropdown-end mt-32 mb-8">
+                        <label tabIndex={0} className="flex items-center p-5 bg-[#F4F4F4] rounded-lg">Filter by <ChevronDownIcon className='h-6 w-6'></ChevronDownIcon></label> */}
+                    {/* <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"> */}
+                    <div className="dropdown dropdown-bottom mt-32 mb-8">
+                        <select className='p-5 bg-[#F4F4F4] rounded-lg' value={filter} onChange={handleFilterChange}>
+                            <option value="all">All</option>
+                            <option value="Remote">Remote</option>
+                            <option value="Onsite">Onsite</option>
+                        </select>
                     </div>
+
+                    {/* <li><a>Onsite</a></li>
+                                <li><a>Remote</a></li> */}
+                    {/* </ul> */}
+                    {/* </div> */}
                     <div>
                         {
-                            initialJob.map(job => <AppliedCard key={job.id} job={job}></AppliedCard>)
+                            filteredJobs.map(job => <AppliedCard key={job.id} job={job}></AppliedCard>)
                         }
                     </div>
                 </div>
