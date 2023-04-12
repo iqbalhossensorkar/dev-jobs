@@ -12,6 +12,13 @@ const First = () => {
     }
     const jobs = useLoaderData();
     const [categories, setCategories] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
+    const handleSeeAllClick = () => {
+        setShowAll(true);
+    };
+    const displayedJobs = showAll ? jobs : jobs.slice(0, 4);
+
     useEffect(() => {
         fetch('category.json')
             .then(res => res.json())
@@ -44,13 +51,15 @@ const First = () => {
             <section>
                 <h1 className='sub-heading'>Featured Jobs</h1>
                 <div className='grid md:grid-cols-2 justify-center items-center gap-6 my-5 container mx-auto p-5'>
-                    {jobs.slice(0, 4) &&
-                        jobs.map(job => <AllJobs key={job.id} job={job}></AllJobs>)
+                    {
+                        displayedJobs.map(job => <AllJobs key={job.id} job={job}></AllJobs>)
                     }
                 </div>
             </section>
             <div className='text-center'>
-                <button className='btn-all mb-32'>See All Jobs</button>
+                {!showAll && (
+                    <button onClick={handleSeeAllClick} className='btn-all mb-32'>See All Jobs</button>
+                )}
             </div>
         </>
     );
