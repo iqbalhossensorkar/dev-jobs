@@ -1,6 +1,8 @@
 import React from 'react';
 import Loading from './loading';
 import { useNavigation } from 'react-router-dom';
+import img from '../assets/banner-icon/Vector-1.png'
+import img2 from '../assets/banner-icon/Vector.png'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 
@@ -21,20 +23,15 @@ const Statistics = () => {
         { id: 8, marks: 60, assignment: "A8" }
     ];
     return (
-        <div className=''>
-
+        <>
+            <div className='relative'>
+                <img src={img} alt="" className='absolute -top-32 -right-4 h-24 md:h-52' />
+            </div>
+            <h2 className='text-center font-bold md:text-3xl py-16 md:py-32 bg-[#FAF8FF]'>Assignment Analytics</h2>
+            <div className='relative'>
+                <img src={img2} alt="" className='absolute bottom-0 h-24 md:h-52' />
+            </div>
             <div className='container mx-auto mt-32 mb-8'>
-                {/* <ResponsiveContainer height={400}>
-                    <LineChart width={1000} height={300} data={marksArray}>
-                        <Line stroke="#8884d8" dataKey="physics" activeDot={{ r: 8 }}></Line>
-                        <Line dataKey="chemistry" stroke="#82ca9d" />
-                        <Line dataKey="math" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                    </LineChart>
-                </ResponsiveContainer> */}
                 <div style={{ width: '100%', height: 400 }}>
                     <ResponsiveContainer>
                         <AreaChart
@@ -63,7 +60,7 @@ const Statistics = () => {
                     </ResponsiveContainer>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
